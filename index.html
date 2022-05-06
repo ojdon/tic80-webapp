@@ -55,8 +55,9 @@
         }
         
         window.addEventListener('keydown', (e) => {
-        if (e.key == '§' || e.key == 'Escape') {
+            
             console.log(e.key);
+        if (e.key == '§'){
             // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
             const keyboardEvent = new KeyboardEvent('keydown', {
                 key: 'Escape',
