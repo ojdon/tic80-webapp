@@ -53,6 +53,28 @@
                 this.remove()
             });
         }
+        
+        window.addEventListener('keydown', (e) => {
+        if (e.key == '§' && !e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey) {
+            e.preventDefault();
+            
+            // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
+            const keyboardEvent = new KeyboardEvent('keydown', {
+                key: 'Escape',
+                keyCode: 27,
+                bubbles: true,
+                cancelable: true,
+                shiftKey: false,
+                ctrlKey: false,
+                altKey: false,
+                metaKey: false,
+            });
+
+            // https://stackoverflow.com/a/44190874/12101554
+            // replace `document` with a specific element if you want to do a specific
+            document.dispatchEvent(keyboardEvent);
+        }
+    });
     </script>
 </body>
 </html>
