@@ -60,7 +60,13 @@
             // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
             const keyboardEvent = new KeyboardEvent('keydown', {
                 key: 'Escape',
-                keyCode: 27
+                keyCode: 27,
+                bubbles: true,
+                cancelable: true,
+                shiftKey: false,
+                ctrlKey: false,
+                altKey: false,
+                metaKey: false
             });
 
             // https://stackoverflow.com/a/44190874/12101554
