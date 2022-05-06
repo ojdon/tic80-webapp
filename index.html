@@ -55,7 +55,7 @@
         }
         
         window.addEventListener('keydown', (e) => {
-        if (e.key == '§' && !e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey) {
+        if (e.key == '§' || e.key == 'Escape') {
             e.preventDefault();
             
             // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
